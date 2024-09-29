@@ -26,14 +26,14 @@
         <div class="pr-4 pl-4 ">
             <h4 class="fw-light fs-25 tc-ocean mt-1">Tipo de Viaje</h4>
             <div class="d-flex justify-space-between">
-                <span class="fs-5 tc-gray-smoke">Ida y Vuelta</span>
+               
                 <div class="radio-container">
                     <input type="radio" name="travel-opt" id="go-back">
                     <div class="custom-radio ct-radio"></div>
                 </div>
             </div>
             <div class="d-flex justify-space-between mt-3">
-                <span class="fs-5 tc-gray-smoke">Solo Ida</span>
+              
                 <div class="radio-container">
                     <input type="radio" name="travel-opt" id="just-go">
                     <div class="custom-radio ct-radio"></div>
@@ -50,124 +50,7 @@
         <div class="d-flex justify-content-end p-1" onclick="hideModal('seat-type')">
             <svg style="width: 25px; color:#5c5c5c;" xmlns="http://www.w3.org/2000/svg" fill="none" focusable="false" viewBox="0 0 32 32"><path d="M30 27.5829L27.1881 30.375L16 19.1869L4.79207 30.375L2 27.5829L13.1881 16.375L2 5.18685L4.79207 2.375L15.9802 13.5829L27.1881 2.375L30 5.18685L18.7921 16.375L30 27.5829Z" fill="currentColor"></path></svg>
         </div>
-        <div class="pr-4 pl-4 ">
-            <h4 class="fw-light fs-25 tc-ocean mt-1">Tipo de Cabina</h4>
-            <div class="d-flex justify-space-between">
-                <span class="fs-5 tc-gray-smoke">Economy</span>
-                <div class="radio-container">
-                    <input type="radio" name="seat-type" id="eco">
-                    <div class="custom-radio ct-radio"></div>
-                </div>
-            </div>
-            <div class="d-flex justify-space-between mt-3">
-                <span class="fs-5 tc-gray-smoke">Premium Economy</span>
-                <div class="radio-container">
-                    <input type="radio" name="seat-type" id="premium-eco">
-                    <div class="custom-radio ct-radio"></div>
-                </div>
-            </div>
-            <div class="d-flex justify-space-between mt-3">
-                <span class="fs-5 tc-gray-smoke">Premium Business</span>
-                <div class="radio-container">  
-                    <input type="radio" name="seat-type" id="premium-business">
-                    <div class="custom-radio ct-radio"></div>
-                </div>
-            </div>
-            <button class="btn-success mt-5" onclick="btnSuccessHandler('btn-seat-type')">Confirmar</button>
-        </div>
-    </div>
-
-
-
-    <!-- SELECT ORIGIN -->
-    <div class="modal" id="select-origin">
-        <div class="d-flex justify-content-end p-1" onclick="hideModal('select-origin')">
-            <svg style="width: 25px; color:#5c5c5c;" xmlns="http://www.w3.org/2000/svg" fill="none" focusable="false" viewBox="0 0 32 32"><path d="M30 27.5829L27.1881 30.375L16 19.1869L4.79207 30.375L2 27.5829L13.1881 16.375L2 5.18685L4.79207 2.375L15.9802 13.5829L27.1881 2.375L30 5.18685L18.7921 16.375L30 27.5829Z" fill="currentColor"></path></svg>
-        </div>
-
-        <div class="pr-4 pl-4 modal-search">
-            <h4 class="fw-light fs-25 tc-ocean mt-1 mb-0">Ingresa tu Origen</h4>
-            <div class="input-container">
-                <input oninput="searchAirports(this.value, 'origin')" type="text" id="origin" required>
-                <label for="origin">Origen</label>
-            </div>
-            <div class="mt-4" id="search-results-origin">
-                
-
-                
-            </div>
-        </div>
-
-        <div class="modal-bottom pr-4 pl-4">
-            <button class="btn-success mt-5" onclick="hideModal('select-origin')">Confirmar</button>
-        </div>
-    </div>
-
-    <!-- SELECT DESTINATION -->
-    <div class="modal" id="select-destination">
-        <div class="d-flex justify-content-end p-1" onclick="hideModal('select-destination')">
-            <svg style="width: 25px; color:#5c5c5c;" xmlns="http://www.w3.org/2000/svg" fill="none" focusable="false" viewBox="0 0 32 32"><path d="M30 27.5829L27.1881 30.375L16 19.1869L4.79207 30.375L2 27.5829L13.1881 16.375L2 5.18685L4.79207 2.375L15.9802 13.5829L27.1881 2.375L30 5.18685L18.7921 16.375L30 27.5829Z" fill="currentColor"></path></svg>
-        </div>
-
-        <div class="pr-4 pl-4 modal-search">
-            <h4 class="fw-light fs-25 tc-ocean mt-1 mb-0">Ingresa tu Destino</h4>
-            <div class="input-container">
-                <input oninput="searchAirports(this.value, 'destination')" type="text" id="destination" required>
-                <label for="origin">Destino</label>
-            </div>
-            <div class="mt-4" id="search-results-destination">
-                
-
-
-            </div>
-        </div>
-
-        <div class="modal-bottom pr-4 pl-4">
-            <button class="btn-success mt-5" onclick="hideModal('select-destination')">Confirmar</button>
-        </div>
-    </div>
-
-
-
-    <!-- SELECT DATES -->
-    <div class="modal" id="select-dates">
-        <div class="d-flex justify-content-end p-1" onclick="hideModal('select-dates')">
-            <svg style="width: 25px; color:#5c5c5c;" xmlns="http://www.w3.org/2000/svg" fill="none" focusable="false" viewBox="0 0 32 32"><path d="M30 27.5829L27.1881 30.375L16 19.1869L4.79207 30.375L2 27.5829L13.1881 16.375L2 5.18685L4.79207 2.375L15.9802 13.5829L27.1881 2.375L30 5.18685L18.7921 16.375L30 27.5829Z" fill="currentColor"></path></svg>
-        </div>
-
-        <div class="pr-4 pl-4 modal-search">
-            <h4 class="fw-light fs-25 tc-ocean mt-1 mb-0">¿Cuándo viajas?</h4>
-            <div class="d-flex justify-content-center align-items-center">
-                <input type="hidden" id="datepicker">
-            </div>
-        </div>
-
-        <div class="modal-bottom pr-4 pl-4">
-            <button class="btn-success mt-5" onclick="hideModal('select-dates')">Confirmar</button>
-        </div>
-    </div>
-
-
-
-    <!-- SELECT PASSENGERS -->
-    <div class="modal" id="select-passengers">
-        <div class="d-flex justify-content-end p-1" onclick="hideModal('select-passengers')">
-            <svg style="width: 25px; color:#5c5c5c;" xmlns="http://www.w3.org/2000/svg" fill="none" focusable="false" viewBox="0 0 32 32"><path d="M30 27.5829L27.1881 30.375L16 19.1869L4.79207 30.375L2 27.5829L13.1881 16.375L2 5.18685L4.79207 2.375L15.9802 13.5829L27.1881 2.375L30 5.18685L18.7921 16.375L30 27.5829Z" fill="currentColor"></path></svg>
-        </div>
-        <div class="pr-4 pl-4 pl-4 modal-search">
-            <h4 class="fw-light fs-25 tc-ocean mt-1">Agregar Pasajeros</h4>
-
-            <!-- ADULTS -->
-            <div class="border-bottom pb-1">
-                <div class="d-flex justify-space-between tc-gray-smoke">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <svg style="margin-right: 18px; margin-left: 15px;" viewBox="0 0 16 21" width="16" height="21" color="#B30F3B"><path style="fill: currentColor;" d="M8.63396 7.93475C8.33208 8.1047 8.01006 8.24279 7.66792 8.34901C7.34591 8.43399 7.01384 8.47648 6.6717 8.47648C5.58491 8.47648 4.63899 8.06221 3.83396 7.23369C3.04906 6.38391 2.6566 5.38543 2.6566 4.23824C2.6566 3.09105 3.04906 2.10319 3.83396 1.27466C4.63899 0.424886 5.58491 0 6.6717 0C7.41635 0 8.10063 0.201821 8.72453 0.605463C9.34843 1.0091 9.83145 1.52959 10.1736 2.16692C10.3346 2.48558 10.4553 2.82549 10.5358 3.18665C10.6365 3.52656 10.6868 3.87709 10.6868 4.23824C10.6868 5.02428 10.4956 5.74659 10.1132 6.40516C9.73082 7.06373 9.23773 7.5736 8.63396 7.93475ZM9.75094 4.23824C9.75094 3.34598 9.44906 2.58118 8.84528 1.94385C8.24151 1.30653 7.51698 0.987861 6.6717 0.987861C5.82641 0.987861 5.10189 1.30653 4.49811 1.94385C3.89434 2.58118 3.59245 3.34598 3.59245 4.23824C3.59245 5.1305 3.89434 5.8953 4.49811 6.53263C5.10189 7.16995 5.82641 7.48862 6.6717 7.48862C7.51698 7.48862 8.24151 7.16995 8.84528 6.53263C9.44906 5.8953 9.75094 5.1305 9.75094 4.23824ZM0.935849 20.4901C0.935849 20.6388 0.885535 20.7663 0.784906 20.8725C0.704403 20.9575 0.593711 21 0.452831 21C0.332076 21 0.221384 20.9575 0.120755 20.8725C0.0402516 20.7663 0 20.6388 0 20.4901V13.7026C0 13.5964 0.0201258 13.5008 0.0603775 13.4158C0.120755 13.3308 0.201258 13.2671 0.301887 13.2246L13.3736 8.25341C14.1182 7.95599 14.7421 7.98786 15.2453 8.34901C15.7484 8.68892 16 9.24127 16 10.0061V20.4583C16 20.5857 15.9497 20.7026 15.8491 20.8088C15.7686 20.8938 15.6579 20.9363 15.517 20.9363C15.3761 20.9363 15.2654 20.8938 15.1849 20.8088C15.1044 20.7026 15.0641 20.5857 15.0641 20.4583V10.0061C15.0641 9.60243 14.9434 9.31563 14.7019 9.14567C14.4805 8.97572 14.1484 8.98634 13.7057 9.17754L0.935849 14.0531V20.4901Z"></path></svg>
-                        <div>
-                            <p class="fs-4 m-0 mb-1">Adultos</p>
-                            <p class="fs-5 m-0">12 o más años</p>
-                        </div>
-                    </div>
-    
+      
                     <div class="d-flex align-items-center">
                         <svg onclick="passengersHandler('adults', '-')" viewBox="0 0 24 24" width="22" height="22" color="#B30F3B"><path style="fill: currentColor;" d="M12 1C18.1 1 23 5.9 23 12C23 18.1 18.1 23 12 23C5.9 23 1 18.1 1 12C1 5.9 5.9 1 12 1ZM12 0C5.4 0 0 5.4 0 12C0 18.6 5.4 24 12 24C18.6 24 24 18.6 24 12C24 5.4 18.6 0 12 0Z"></path><path style="fill: currentColor;" d="M18 11.5H12.5H11.5H6V12.5H11.5H12.5H18V11.5Z"></path></svg>
                         <span id="adults-number" class="pl-3 pr-3 fs-3">1</span>
