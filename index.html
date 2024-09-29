@@ -31,71 +31,7 @@
             <button class="btn-session">  
                 Iniciar sesión
             </button>
-            <img class="navbar--hamburger" src="./hamburger_a.png">
-        </div>
-    </nav>
-
-    <div class="index-background"></div>
-
-    <main>
-        <div class="card card-rounded mt-3">
-            <div class="scrollable-nav pb-3">
-                <button class="scroll-button left-button"><img style="width: 17px; height: 17px;" src="./left_gray_arrow.png"></button>
-                <div class="nav-items">
-                    <a href="#" class="nav-item ni-selected">Vuelos</a>
-                    <a  class="nav-item">Paquetes</a>
-                    <a  class="nav-item">Hoteles</a>
-                    <a  class="nav-item">Carros</a>
-                    <a  class="nav-item">Seguros</a>
-                    <a  class="nav-item">Upgrade</a>
-                </div>
-                <button class="scroll-button right-button"><img style="width: 17px; height: 17px;" src="./right_red_arrow.png"></button>
-            </div>
-
-            <div class="pl-3 pr-3 pb-3">
-                <h2 class=" pt-2 main-title">¿A dónde quieres ir?</h2>
-                <div class="d-flex justify-space-between mt-3 pl-3 pr-3">
-                    <div onclick="showModal('travel-type')" ><span class="mr-1 fs-5 tc-gray-smoke fw-bolder" id="label-travel-type">Ida y Vuelta</span><img width="15px" src="./red_down_arrow.png"></div>
-                    <div onclick="showModal('seat-type')" ><span class="mr-1 fs-5 tc-gray-smoke fw-bolder" id="label-seat-type">Economy</span><img width="15px" src="./red_down_arrow.png"></div>
-                </div>
-                <div class="mt-3 d-flex align-items-center justify-space-between">
-                    <img class="mr-3" src="./takeoff_icon.png" width="25px">
-                    <div class="index-input" id="label-origin" onclick="showModal('select-origin')">
-                        <p class="placeholder">Origen</p>
-                        <!-- <p><b>Yopal</b> EYP - Colombia</p> -->
-                    </div>
-                </div>
-                <div id="cont-destination" class="pb-5 mt-3 d-flex align-items-center justify-space-between">
-                    <img style="margin-right: 24px;" src="./mappoint_icon.png" width="17px">
-                    <div class="index-input" id="label-destination" onclick="showModal('select-destination')">
-                        <p class="placeholder" >Destino</p>
-                        <!-- <p><b>Yopal</b> EYP - Colombia</p> -->
-                    </div>
-                </div>
-
-                <div id="rest-options" class="d-none">
-                    <div class="mt-3 d-flex align-items-center justify-space-between">
-                        <svg style="margin-right: 24px;" viewBox="0 0 17 21" color="#2500c3" width="22" height="22"><path style="fill: currentColor;" d="M10.1951 4.54332C10.0751 4.54332 9.96786 4.50175 9.87314 4.41278C9.77841 4.32974 9.73407 4.21709 9.73407 4.08067V3.04865H7.65639C7.51115 3.04865 7.39744 3.00715 7.30271 2.92412C7.2143 2.83515 7.16395 2.72835 7.16395 2.59193C7.16395 2.47924 7.20799 2.3784 7.30271 2.28944C7.39744 2.20047 7.51115 2.15897 7.65639 2.15897H9.73407V0.432966C9.73407 0.320273 9.77841 0.219437 9.87314 0.130469C9.96786 0.0474323 10.0688 0 10.1951 0C10.3403 0 10.454 0.041501 10.5487 0.130469C10.6435 0.219437 10.6875 0.320273 10.6875 0.432966V4.08067C10.6875 4.21709 10.6435 4.32974 10.5487 4.41278C10.4603 4.50175 10.3403 4.54332 10.1951 4.54332ZM5.30089 15.8007C5.19985 15.8007 5.12417 15.783 5.08628 15.7414C4.90314 15.6643 4.80845 15.5398 4.80845 15.3678V11.8624C4.80845 11.7319 4.85248 11.6192 4.94721 11.5302C5.03562 11.4413 5.15564 11.3998 5.30089 11.3998C5.44614 11.3998 5.55984 11.4413 5.65457 11.5302C5.7493 11.6192 5.79333 11.726 5.79333 11.8624V14.4781L10.9339 10.9194C11.0349 10.8423 11.1549 10.8126 11.2875 10.8304C11.4202 10.8482 11.5277 10.9075 11.6098 11.0024C11.6919 11.0973 11.7169 11.21 11.6853 11.3345C11.6537 11.4591 11.5906 11.5599 11.4895 11.637L5.58519 15.7177C5.54099 15.7355 5.49664 15.7533 5.44612 15.777C5.38929 15.7948 5.3451 15.8007 5.30089 15.8007ZM14.2619 19.1044C14.6282 19.1044 14.9124 19.0154 15.1145 18.8434C15.2976 18.6714 15.3923 18.4045 15.3923 18.0368V7.72838H0.987658V19.1044H14.2619ZM4.4483 4.54332C4.30305 4.54332 4.18934 4.50175 4.09462 4.41278C4.0062 4.32974 3.95586 4.21709 3.95586 4.08067V3.04865H2.14953C1.78326 3.04865 1.49933 3.14947 1.29724 3.33927C1.09516 3.52907 0.994133 3.79596 0.994133 4.14591V6.84463H15.3988V3.04865H13.2894C13.1441 3.04865 13.0304 3.00715 12.9357 2.92412C12.841 2.83515 12.7969 2.72835 12.7969 2.59193C12.7969 2.47924 12.841 2.3784 12.9357 2.28944C13.0304 2.20047 13.1441 2.15897 13.2894 2.15897H15.8848C16.0048 2.15897 16.1186 2.20047 16.207 2.28944C16.3017 2.3784 16.3461 2.47331 16.3461 2.59193V18.0487C16.3461 18.6655 16.15 19.14 15.7648 19.484C15.3986 19.828 14.8999 20 14.2684 20H0.507862C0.387876 20 0.274032 19.9526 0.172991 19.8517C0.0908954 19.7983 0.046875 19.7035 0.046875 19.567V4.14591C0.046875 3.55278 0.242592 3.07233 0.627811 2.70459C1.01303 2.34279 1.5245 2.15897 2.156 2.15897H3.96202V0.432966C3.96202 0.320273 4.00637 0.219437 4.10109 0.130469C4.19582 0.0474323 4.30952 0 4.45477 0C4.57476 0 4.68196 0.041501 4.77669 0.130469C4.87142 0.219437 4.91576 0.320273 4.91576 0.432966V4.08067C4.91576 4.21709 4.87142 4.32974 4.77669 4.41278C4.67565 4.50175 4.56828 4.54332 4.4483 4.54332Z"></path></svg>
-                        <div class="index-input" id="label-dates" onclick="showModal('select-dates')">
-                            <p class="placeholder" >Agregar fecha</p>
-                            <!-- <p><span class="fw-light text-italic tc-gray-smoke">Jue </span><b>25 De Ene</b><span class="fw-light text-italic tc-gray-smoke"> a Vie </span><b>26 De Ene</b></p> -->
-                        </div>
-                    </div>
-    
-                    <div class="pb-1 mt-2 border-bottom d-flex justify-space-between align-items-center" onclick="showModal('select-passengers')">
-                        <div class="d-flex align-items-center" >
-                            <svg style="margin-right: 24px;" viewBox="0 0 16 21" width="16" height="21" color="#2500c3"><path style="fill: currentColor;" d="M8.63396 7.93475C8.33208 8.1047 8.01006 8.24279 7.66792 8.34901C7.34591 8.43399 7.01384 8.47648 6.6717 8.47648C5.58491 8.47648 4.63899 8.06221 3.83396 7.23369C3.04906 6.38391 2.6566 5.38543 2.6566 4.23824C2.6566 3.09105 3.04906 2.10319 3.83396 1.27466C4.63899 0.424886 5.58491 0 6.6717 0C7.41635 0 8.10063 0.201821 8.72453 0.605463C9.34843 1.0091 9.83145 1.52959 10.1736 2.16692C10.3346 2.48558 10.4553 2.82549 10.5358 3.18665C10.6365 3.52656 10.6868 3.87709 10.6868 4.23824C10.6868 5.02428 10.4956 5.74659 10.1132 6.40516C9.73082 7.06373 9.23773 7.5736 8.63396 7.93475ZM9.75094 4.23824C9.75094 3.34598 9.44906 2.58118 8.84528 1.94385C8.24151 1.30653 7.51698 0.987861 6.6717 0.987861C5.82641 0.987861 5.10189 1.30653 4.49811 1.94385C3.89434 2.58118 3.59245 3.34598 3.59245 4.23824C3.59245 5.1305 3.89434 5.8953 4.49811 6.53263C5.10189 7.16995 5.82641 7.48862 6.6717 7.48862C7.51698 7.48862 8.24151 7.16995 8.84528 6.53263C9.44906 5.8953 9.75094 5.1305 9.75094 4.23824ZM0.935849 20.4901C0.935849 20.6388 0.885535 20.7663 0.784906 20.8725C0.704403 20.9575 0.593711 21 0.452831 21C0.332076 21 0.221384 20.9575 0.120755 20.8725C0.0402516 20.7663 0 20.6388 0 20.4901V13.7026C0 13.5964 0.0201258 13.5008 0.0603775 13.4158C0.120755 13.3308 0.201258 13.2671 0.301887 13.2246L13.3736 8.25341C14.1182 7.95599 14.7421 7.98786 15.2453 8.34901C15.7484 8.68892 16 9.24127 16 10.0061V20.4583C16 20.5857 15.9497 20.7026 15.8491 20.8088C15.7686 20.8938 15.6579 20.9363 15.517 20.9363C15.3761 20.9363 15.2654 20.8938 15.1849 20.8088C15.1044 20.7026 15.0641 20.5857 15.0641 20.4583V10.0061C15.0641 9.60243 14.9434 9.31563 14.7019 9.14567C14.4805 8.97572 14.1484 8.98634 13.7057 9.17754L0.935849 14.0531V20.4901Z"></path></svg>
-                            <p id="label-passengers">1 Adulto</p>
-                        </div>
-                        <svg viewBox="0 0 24 24" width="20" height="20" color="#2500c3" id="iconAddPassengerCTA"><path d="M12 1C18.1 1 23 5.9 23 12C23 18.1 18.1 23 12 23C5.9 23 1 18.1 1 12C1 5.9 5.9 1 12 1ZM12 0C5.4 0 0 5.4 0 12C0 18.6 5.4 24 12 24C18.6 24 24 18.6 24 12C24 5.4 18.6 0 12 0Z"></path><path d="M18 11.5H12.5V6H11.5V11.5H6V12.5H11.5V18H12.5V12.5H18V11.5Z"></path></svg>
-                    </div>
-
-                    <button onclick="nextStep()" class="btn-success mt-1">Confirmar</button>
-                </div>
-            </div>                
-        </div>
-
-
+           
 
         <div class="card p-1 mt-3">
             <div class="card-banner">
